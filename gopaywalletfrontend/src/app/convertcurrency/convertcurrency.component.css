@@ -1,0 +1,384 @@
+/* rate card section */
+.userdashboard {
+    height: 65vh;
+    width: 100vw;
+    display: flex;
+    background-color: rgb(235, 235, 235); 
+    justify-content: space-evenly;
+}
+
+.usercard {
+    height: 90%;
+    width: 20%;
+    background-color: white;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 50px;
+    font-size: 1.3em;
+    box-shadow: -10px 10px 20px #888888;
+}
+
+.balance {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.amount {
+    font-weight: 600;
+    width: 80%;
+    display: flex;
+    align-items: center; 
+    margin: 1% 0;
+}
+
+img.currencyflag {
+    width: 30%; 
+    height: 90%;
+    margin-right: 10%;
+    overflow: hidden;
+}
+
+
+.userimage {
+    height: 40%;
+}
+
+.userimage img {
+    height: 100%;
+}
+
+.menu {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.link{
+    display: flex;
+    width: 100%;
+    height: 15%;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    font-size: 2em;
+}
+
+.link:hover {
+    cursor: pointer;
+}
+
+/* amountpart  */
+.convertcurrencysection {
+    height: 90%; 
+    width: 60%;
+    background-color: white;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 50px;
+    box-shadow: -10px 10px 20px #888888;
+}
+
+.currecyconvertform {
+    width: 80%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.basecurrency {
+    width: 100%;
+    height: 20%;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+label {
+    font-weight: 600;
+    font-size: 2em;
+}
+
+.newcurrency {
+    width: 100%;
+    height: 20%;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inputfields {
+    height: 100%;
+    width: 15%;
+    border-radius: 30px;
+    font-size: 1.8em;
+    text-align: center;
+    border: none;
+}
+
+.submit {
+    height: 20%;
+    width: 30%;
+    align-self: center;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: white;
+    background-image: linear-gradient(to right, rgb(25, 53, 105) , rgb(22, 121, 179));
+    border-radius: 20px;
+    border: none;
+    box-shadow: -10px 10px 20px #888888;
+}
+
+.submit:hover{
+    cursor: pointer;
+    box-shadow: -5px 5px 10px #888888;
+}
+
+select {
+    text-align-last: center;
+}
+
+#amount {
+    width: 45%;
+    height: 100%;
+    border-radius: 30px;
+    background-color: rgb(235, 235, 235); 
+    border: none;
+    text-align: center;
+    font-size: 1.8em;
+}
+
+.convertedamount {
+    width: 45%;
+    text-align: center;
+    font-weight: 900;
+    font-size: 2em;
+}
+
+.basebutton {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#confirm {
+    height: 100%;
+    width: 40%;
+    border-radius: 20px;
+    border: none;
+    background-image: linear-gradient(to right, rgb(25, 53, 105) , rgb(22, 121, 179));
+    color: white;
+    font-size: 2.5em;
+    font-weight: 600; 
+    align-self: center;
+    box-shadow: -5px 5px 10px #888888;
+}
+
+#confirm:hover {
+    cursor: pointer;
+    box-shadow: none;
+}
+#reset {
+    height: 100%;
+    width: 40%;
+    border-radius: 20px;
+    border: none;
+    background-image: linear-gradient(to right, rgb(25, 53, 105) , rgb(22, 121, 179));
+    color: white;
+    font-size: 2.5em;
+    font-weight: 600; 
+    align-self: center;
+    box-shadow: -5px 5px 10px #888888;
+}
+#reset:hover {
+    cursor: pointer;
+    box-shadow: none;
+}
+
+h1 {
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: 2em;
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 600px; /* Set a default minimum width */
+    margin-left: -300px; /* Divide value of min-width by 2 */
+    background-image: linear-gradient(to right, rgb(25, 53, 105) , rgb(22, 121, 179)); /* Black background color */
+    color: #fff; /* White text color */
+    font-weight: 600;
+    font-size: 3em;
+    text-align: center; /* Centered text */
+    border-radius: 30px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+  }
+  
+  /* Show the snackbar when clicking on a button (class added with JavaScript) */
+  #snackbar.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  /* Animations to fade the snackbar in and out */
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+
+  @media (max-width: 426px) {
+    .userdashboard {
+        height: 250vh;
+        flex-direction: column;
+    }
+
+    .userimage img {
+        height: 80%;
+    }
+
+    .ratesection {
+        display: none;
+    }
+
+    .usercard {
+        height: 60%;
+        width: 95%;
+        margin-top: 50px;
+    }
+
+    .menu {
+        width: 95%;
+        align-self: center;
+        align-items: center;
+    }
+
+    .convertcurrencysection {
+        margin: 50px 0;
+        width: 95%;
+    }
+
+    .basecurrency {
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    #amount {
+        height: 30%;
+        width: 80%;
+    }
+
+    #accountnumber {
+        height: 10%;
+        width: 100%;
+    }
+
+    .inputfields {
+        height: 10%;
+        width: 100%;
+    }
+
+    .transactioncategory {
+        margin-top: 30px;
+        line-height: 1.3;
+        width: 95%;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #transactioncategory {
+        width: 100%;
+        align-self: center;
+        text-align: center;
+    }
+    #transactioncategory.inputfields{
+        height: 50%;
+    }
+    .submit {
+        height: 30%;
+        width: 80%;
+    }
+
+    .addamount {
+        margin: 30px 0;
+        width: 95%;
+    }
+
+    .basecurrency .inputfields {
+        height: 80px;
+        width: 160px;
+        background-color: #d1d1d1;
+    }
+
+    .basebutton {
+        height: 200px;
+        flex-direction: column;
+    }
+
+    #confirm {
+        width: 80%;
+        height: 40%;
+    }
+    #reset {
+        width: 80%;
+        height: 40%;
+    }
+
+    .newcurrency {
+        margin-top: 30px;
+    
+        flex-direction: column;
+        height: 60%;
+        width: 100%;
+    }
+
+    .newcurrency .inputfields {
+        height: 80px;
+        width: 160px;
+        background-color: #d1d1d1;
+    }
+
+    label {
+        margin-bottom: 10px;
+    }
+
+    form {
+        width: 100%;
+    }
+}

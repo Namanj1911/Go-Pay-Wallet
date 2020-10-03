@@ -1,0 +1,52 @@
+<div class="maindashboard">
+    <div class="mainlink">
+        <div class="link" (click)="onRegister()">
+            <p>NEW USER? <strong>REGISTER NOW!</strong></p>
+        </div>
+        <div class="link" (click)="onLogin()">
+            <p><strong>LOGIN </strong>TO YOUR ACCOUNT</p>
+        </div>
+        <div class="link" (click)="onAbout()">
+            <P>KNOW MORE ABOUT <strong>GOPAY WALLET</strong></P>
+        </div>
+    </div>
+    <div class="ratesection">
+        <div class="ratecard">
+            <img src="../../assets/india.png" alt="" class="flag">
+            <div class="rate">
+                <p>BUY</p><p class="price"> -- </p>
+            </div>
+            <div class="rate">
+                <p>SELL</p><p class="price"> -- </p>
+            </div>
+        </div>
+        <div class="ratecard">
+            <img src="../../assets/usa.png" alt="" class="flag">
+            <div class="rate">
+                <p>BUY</p><p class="price">{{USD}}</p>
+            </div>
+            <div class="rate">
+                <p>SELL</p><p class="price">{{USD-1}}</p>
+            </div>
+        </div>
+        <div class="ratecard">
+            <img src="../../assets/china.png" alt="" class="flag">
+            <div class="rate">
+                <p>BUY</p><p class="price">{{CNY}}</p>
+            </div>
+            <div class="rate">
+                <p>SELL</p><p class="price">{{CNY-1}}</p>
+            </div>
+        </div>
+        <div class="ratecard">
+            <img src="../../assets/euro.png" alt="" class="flag">
+            <div class="rate">
+                <p>BUY</p><p class="price">{{EURO}}</p>
+            </div>
+            <div class="rate">
+                <p>SELL</p><p class="price">{{EURO-1}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+

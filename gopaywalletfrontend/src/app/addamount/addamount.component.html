@@ -1,0 +1,35 @@
+<div class="userdashboard">
+    <div class="usercard">
+        <div class="userimage">
+            <img src="../../assets/profile.png" alt="">
+        </div>
+        <h2>Welcome {{username}}</h2>
+        <div class="balance">
+            <div class="amount" id="inr">
+                <img src="../../assets/india.png" alt="" class="currencyflag">
+                <p class="currencyamount">{{currentINR}} RS</p>
+            </div>
+            <div class="amount" id="usd">
+                <img src="../../assets/usa.png" alt="" class="currencyflag">
+                <p class="currencyamount">{{currentUSD}} USD</p>
+            </div>
+            <div class="amount" id="cny">
+                <img src="../../assets/china.png" alt="" class="currencyflag">
+                <p class="currencyamount">{{currentCNY}} CNY</p>
+            </div>
+            <div class="amount" id="euro">
+                <img src="../../assets/euro.png" alt="" class="currencyflag">
+                <p class="currencyamount">{{currentEURO}} EURO</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="addamount">
+        <h1>ADD AMOUNT</h1>
+        <form #addamountForm="ngForm" (ngSubmit)="onSubmit(amount)" class="addamountform" novalidate>
+            <input type="number" name="amount" id="amount" placeholder="AMOUNT" #amount>
+            <input type="submit" value="SUBMIT" class="submit"> 
+        </form>
+    </div>
+    <div id="snackbar">Amount Added!</div>
+</div>

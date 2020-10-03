@@ -1,0 +1,52 @@
+.ratecard{
+    height: 8vh;
+    width: 100vw;
+    background-image: linear-gradient(to right, rgb(25, 53, 105) , rgb(22, 121, 179));
+    display: flex;
+    /* background : linear-gradient(270deg, #FFBB94 0%, #FF889D 100%); */
+}
+
+.rate {
+    width: 25%;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.rate img {
+    box-shadow: 1px 1px 10px #000000;
+    height: 100%;
+    width: 15%;
+}
+
+.rate p {
+    margin-left: 5%;
+}
+
+/* media queries for phone  */
+@media (max-width: 426px) {
+    .ratecard {
+        height: 100vh;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .rate {
+        width: 90%;
+        flex-direction: column;
+
+    }
+
+    .rate img {
+        height: 80%;
+        width: 30%;
+    }
+
+    .rate p {
+        margin: 10px;
+    }
+}

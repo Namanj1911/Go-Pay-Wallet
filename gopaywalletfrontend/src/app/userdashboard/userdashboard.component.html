@@ -1,0 +1,83 @@
+<div class="userdashboard">
+    <div class="usercard">
+        <div class="userimage">
+            <img src="../../assets/profile.png" alt="">
+        </div>
+        <h2>Welcome {{username}}</h2>
+        <div class="balance">
+            <div class="amount" id="inr">
+                <img src="../../assets/india.png" alt="" class="currencyflag">
+                <p class="currencyamount">{{currentINR}} RS</p>
+            </div>
+            <div class="amount" id="usd">
+                <img src="../../assets/usa.png" alt="" class="currencyflag">
+                <p class="currencyamount">{{currentUSD}} USD</p>
+            </div>
+            <div class="amount" id="cny">
+                <img src="../../assets/china.png" alt="" class="currencyflag">
+                <p class="currencyamount">{{currentCNY}} CNY</p>
+            </div>
+            <div class="amount" id="euro">
+                <img src="../../assets/euro.png" alt="" class="currencyflag">
+                <p class="currencyamount">{{currentEURO}} EURO</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu">
+        <div class="link" (click)="onMakePayment()">
+            <p>MAKE <strong>PAYMENT</strong></p>
+        </div>
+        <div class="link" (click)="onAddAmount()">
+            <p><strong>ADD</strong> AMOUNT</p>
+        </div>
+        <div class="link" (click)="onConvertCurrency()">
+            <p><strong>CONVERT</strong> CURRENCY</p>
+        </div>
+        <div class="link" (click)="onViewTransactions()">
+            <p>VIEW <strong>TRANSACTIONS</strong></p>
+        </div>
+        <div class="link" (click)="onViewConversions()">
+            <p>VIEW <strong>CONVERSIONS</strong></p>
+        </div>
+    </div>
+
+    <div class="ratesection">
+        <div class="ratecard">
+            <img src="../../assets/india.png" alt="" class="flag">
+            <div class="rate">
+                <p>BUY</p><p class="price"> -- </p>
+            </div>
+            <div class="rate">
+                <p>SELL</p><p class="price"> -- </p>
+            </div>
+        </div>
+        <div class="ratecard">
+            <img src="../../assets/usa.png" alt="" class="flag">
+            <div class="rate">
+                <p>BUY</p><p class="price">{{USD}}</p>
+            </div>
+            <div class="rate">
+                <p>SELL</p><p class="price">{{USD-1}}</p>
+            </div>
+        </div>
+        <div class="ratecard">
+            <img src="../../assets/china.png" alt="" class="flag">
+            <div class="rate">
+                <p>BUY</p><p class="price">{{CNY}}</p>
+            </div>
+            <div class="rate">
+                <p>SELL</p><p class="price">{{CNY-1}}</p>
+            </div>
+        </div>
+        <div class="ratecard">
+            <img src="../../assets/euro.png" alt="" class="flag">
+            <div class="rate">
+                <p>BUY</p><p class="price">{{EURO}}</p>
+            </div>
+            <div class="rate">
+                <p>SELL</p><p class="price">{{EURO-1}}</p>
+            </div>
+        </div>
+    </div>
+</div>

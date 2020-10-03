@@ -1,0 +1,57 @@
+<div class="userdashboard">
+    <div class="usercard">
+        <div class="userimage">
+            <img src="../../assets/profile.png" alt="">
+        </div>
+        <h2>Welcome {{username}}</h2>
+        <div class="balance">
+            <div class="amount" id="inr">
+                <img src="../../assets/india.png" alt="" class="currencyflag">
+                <p class="currencyamount">{{currentINR}} RS</p>
+            </div>
+            <div class="amount" id="usd">
+                <img src="../../assets/usa.png" alt="" class="currencyflag">
+                <p class="currencyamount">{{currentUSD}} USD</p>
+            </div>
+            <div class="amount" id="cny">
+                <img src="../../assets/china.png" alt="" class="currencyflag">
+                <p class="currencyamount">{{currentCNY}} CNY</p>
+            </div>
+            <div class="amount" id="euro">
+                <img src="../../assets/euro.png" alt="" class="currencyflag">
+                <p class="currencyamount">{{currentEURO}} EURO</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="convertcurrencysection">
+        <h1>MAKE PAYMENT</h1>
+
+        <form class="paymentform" #payment="ngForm" (ngSubmit)="onSubmit(currencyUsed, amountTransferred, accountTransferredto, transactionCategory)" novalidate>
+            <div class="basecurrency">
+                <label for="currency">BASE CURRENCY</label>
+                <select name="currencyUsed" id="basecurrency" aria-placeholder="BASE CURRENCY" class="inputfields" #currencyUsed>
+                    <option value="inr" class="option">INR</option>
+                    <option value="eur">EUR</option>
+                    <option value="usd">USD</option>
+                    <option value="cny">CNY</option>
+                </select>
+                <input type="number" name="amountTransferred" id="amount" placeholder="AMOUNT" #amountTransferred>
+            </div>
+            
+            <input type="text" name="accountTransferredto" id="accountnumber" placeholder="ACCOUNT NUMBER" #accountTransferredto>
+
+            <div class="transactioncategory">
+                <label for="currency">TRANSACTION CATEGORY</label>
+                <select name="transactionCategory" id="transactioncategory" aria-placeholder="TRANSACTION CATEGORY" class="inputfields" #transactionCategory>
+                    <option value="medical">MEDICAL</option>
+                    <option value="fashion">FASHION</option>
+                    <option value="education">EDUCATION</option>
+                    <option value="other">OTHER</option>
+                </select>
+            </div>
+            <input type="submit" value="SUBMIT" class="submit"> 
+        </form>
+    </div>
+    <div id="snackbar">Payment Successfull!</div>
+</div>

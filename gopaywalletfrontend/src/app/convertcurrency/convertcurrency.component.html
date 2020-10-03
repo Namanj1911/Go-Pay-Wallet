@@ -1,0 +1,65 @@
+<div class="userdashboard">
+    <div class="usercard">
+        <div class="userimage">
+            <img src="../../assets/profile.png" alt="">
+        </div>
+        <h2>Welcome, {{username}}</h2>
+        <div class="balance">
+            <div class="amount" id="inr">
+                <img src="../../assets/india.png" alt="" class="currencyflag">
+                <p class="currencyamount">{{currentINR}} RS</p>
+            </div>
+            <div class="amount" id="usd">
+                <img src="../../assets/usa.png" alt="" class="currencyflag">
+                <p class="currencyamount">{{currentUSD}} USD</p>
+            </div>
+            <div class="amount" id="cny">
+                <img src="../../assets/china.png" alt="" class="currencyflag">
+                <p class="currencyamount">{{currentCNY}} CNY</p>
+            </div>
+            <div class="amount" id="euro">
+                <img src="../../assets/euro.png" alt="" class="currencyflag">
+                <p class="currencyamount">{{currentEURO}} EURO</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="convertcurrencysection">
+        <h1>CONVERT CURRENCY</h1>
+        <form #convertCurrencyForm="ngForm" (ngSubmit)="onSubmit()" class="currecyconvertform">
+            <div class="basecurrency">
+                <label for="currency">BASE CURRENCY</label>
+                <select #baseCurrency name="baseCurrency" id="basecurrency" aria-placeholder="BASE CURRENCY"
+                    class="inputfields" (change)="selectChangeHandlerBase($event)"
+                    [(ngModel)]="conversion.baseCurrency">
+                    <option value="INR" class="option">INR</option>
+                    <option value="EUR">EUR</option>
+                    <option value="USD">USD</option>
+                    <option value="CNY">CNY</option>
+                </select>
+                <input #amountConverted type="number" name="amount" id="amount" placeholder="AMOUNT"
+                    [(ngModel)]="baseCurrencyAmount">
+            </div>
+    <!--        <div class="basebutton">
+                <button id="confirm" (click)="onConfirm()">CONFIRM</button>
+                <button id="reset" (click)="onReset()">RESET</button>
+            </div>  -->
+            <div class="newcurrency">
+                <label for="newcurrency">NEW CURRENCY</label>
+                <select #newCurrency name="newcurrency" id="newcurrency" aria-placeholder="NEW CURRENCY"
+                    class="inputfields" (change)="selectChangeHandlerNew($event)">
+                    <option value="INR">INR</option>
+                    <option value="EUR">EUR</option>
+                    <option value="USD">USD</option>
+                    <option value="CNY">CNY</option>
+                </select>
+                <p class="convertedamount">{{conversion.newAmount}}</p>
+            </div>
+
+
+
+            <input type="submit" value="SUBMIT" class="submit" (click)="onSubmit()">
+        </form>
+    </div>
+    <div id="snackbar">Currency Converted!</div>
+</div>

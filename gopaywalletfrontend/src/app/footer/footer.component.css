@@ -1,0 +1,119 @@
+footer {
+    height: 15vh;
+    width: 100vw;
+    background-image: linear-gradient(to right, rgb(8, 9, 10) , rgb(20, 27, 31));
+    display: flex;
+}
+
+.logosection {
+    color: white;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    margin-left: 10%;
+}
+
+h1 {
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: 2.5em;
+}
+.subscribesection {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-top: 10px;
+    /* align-items: center; */
+    margin-left: 10%;
+}
+h2 {
+    font-family: 'Montserrat';
+    font-weight: 900;
+    margin: 0;
+}
+.inputemail {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    height: 50px;
+    justify-content: space-between;
+}
+
+#email {
+    width: 48%;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.3em;
+}
+
+#subscribe {
+    width: 48%;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, rgb(25, 53, 105) , rgb(22, 121, 179));
+    color: white;
+    font-weight: 600;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+.socialmedia {
+    margin-left: 10%;
+    margin-top: 10px;
+    color: white;
+}
+
+i {
+    font-size: 2em;
+    margin-top: 10px;
+    margin-right: 25px;
+}
+
+p{
+    margin: 0;
+}
+
+@media (max-width: 426px) {
+    footer {
+        height: 60vh;
+        flex-direction: column;
+    }
+
+    .logosection {
+        margin: 50px 0px ;
+        width: 100%;
+    }
+
+    .logosection h1 {
+        margin-left: 150px;
+    }
+
+    .subscribesection {
+        width: 95%;
+        margin: 0;
+        align-self: center;
+        align-items: center;
+
+    }
+
+    .socialmedia {
+        width: 90%;
+        margin: 0;
+        align-self: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .socialmedia h2 {
+        margin-top: 50px;
+        text-align: center;
+    }
+}

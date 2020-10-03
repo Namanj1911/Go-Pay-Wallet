@@ -1,0 +1,36 @@
+<div class="register">
+    <div class="registercard">
+        <h1>REGISTER</h1>
+        <form #userForm="ngForm" (ngSubmit)="onSubmit(uname, ucontact, ubaseCurrency, uaccountNumber, uaccountType, uusername, upassword)" novalidate>
+            <div class="personalsection">
+                <input type="text" placeholder="NAME" class="inputfields" name="name" #uname>
+                <input type="number" name="contact" id="contact" placeholder="CONTACT" class="inputfields" #ucontact>
+                <label for="currency">CURRENCY</label>
+                <select name="baseCurrency" id="currency" aria-placeholder="CURRENCY" class="inputfields" #ubaseCurrency>
+                    <option value="inr" class="option">INR</option>
+                    <option value="euro">EURO</option>
+                    <option value="usd">USD</option>
+                    <option value="cny">CNY</option>
+                </select>
+            </div>
+            <div class="banksection">
+                <input type="text" placeholder="ACCOUNT NAME" class="inputfields" #uaccountName>
+                <input type="number" name="accountNumber" id="accountnumber" placeholder="ACCOUNT NUMBER"
+                    class="inputfields" #uaccountNumber>
+                <label for="accounttype">ACCOUNT TYPE</label>
+                <select name="accountType" id="currency" aria-placeholder="CURRENCY" class="inputfields" #uaccountType>
+                    <option value="saving" class="option">SAVING</option>
+                    <option value="current">CURRENT</option>
+                </select>
+            </div>
+            <div class="usersection">
+                <input type="text" placeholder="USERNAME" class="inputfields" #uusername name="username">
+                <input type="password" name="password" id="password" placeholder="PASSWORD" class="inputfields"
+                    #upassword name="userPassword">
+                <input type="password" name="confirmpassword" id="confirmpassword" placeholder="CONFIRM PASSWORD"
+                    class="inputfields">
+                <input type="submit" value="SUBMIT" class="submit">
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,185 @@
+/* rate card section */
+.userdashboard {
+    height: 65vh;
+    width: 100vw;
+    display: flex;
+    background-color: rgb(235, 235, 235); 
+    justify-content: space-evenly;
+}
+
+.usercard {
+    height: 90%;
+    width: 20%;
+    background-color: white;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 50px;
+    font-size: 1.3em;
+    box-shadow: -10px 10px 20px #888888;
+}
+
+.balance {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.amount {
+    font-weight: 600;
+    width: 80%;
+    display: flex;
+    align-items: center; 
+    margin: 1% 0;
+}
+
+img.currencyflag {
+    width: 30%; 
+    height: 90%;
+    margin-right: 10%;
+    overflow: hidden;
+}
+
+.userimage {
+    height: 40%;
+}
+
+.userimage img {
+    height: 100%;
+}
+
+.menu {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.link{
+    display: flex;
+    width: 100%;
+    height: 15%;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    font-size: 2em;
+}
+
+.link:hover {
+    cursor: pointer;
+}
+
+/* amountpart  */
+.conversionsection {
+    height: 90%; 
+    width: 60%;
+    background-color: white;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: first baseline;
+    border-radius: 50px;
+    box-shadow: -10px 10px 20px #888888;
+    
+}
+
+.conversionlist {
+    width: 90%;
+    height: 80%;
+    overflow-y: scroll;
+}
+.conversion{
+    display: flex; 
+    width:100%;
+    font-size: 1.5em;
+    margin-bottom: 1%;
+    margin-right: 0;
+    justify-content: space-evenly;
+}
+
+.conversionid {
+    font-weight: 400;
+    display: none;
+}
+
+.dateoftransfer {
+
+    margin-left: 2%;
+    font-weight: 600;
+}
+
+.amountconverted {
+    font-weight: 400;
+    width: 10%;
+    padding-left: 10px;
+}
+
+.basecurrency {
+    margin-left: 1%;
+    font-weight: 400;
+    text-transform: uppercase;
+    width: 10%;
+}
+
+.newamount {
+    margin-left: 10%;
+    font-weight: 400;
+    width: 10%;
+}
+
+.newcurrency {
+    margin-left: 1%;
+    font-weight: 400;
+    text-transform: uppercase;
+    width: 10%;
+}
+
+h1 {
+    font-family: 'Montserrat';
+    /* font-size: 2em; */
+    font-weight: 900;
+    font-size: 2.5em;
+    margin: 2% 0;
+}
+
+@media (max-width: 426px) {
+    .userdashboard {
+        height: 150vh;
+        flex-direction: column;
+    }
+
+    .userimage img {
+        height: 80%;
+    }
+
+    .ratesection {
+        display: none;
+    }
+
+    .usercard {
+        height: 50%;
+        width: 95%;
+        margin-top: 50px;
+    }
+
+    .menu {
+        width: 95%;
+        align-self: center;
+        align-items: center;
+    }
+
+    .conversionsection {
+        margin: 50px 0;
+        width: 95%;
+    }
+
+    h1 {
+        font-family: 'Montserrat';
+        font-size: 2em;
+        font-weight: 900;
+    }
+}

@@ -1,0 +1,50 @@
+<div class="userdashboard">
+    <div class="usercard">
+        <div class="userimage">
+            <img src="../../assets/profile.png" alt="">
+        </div>
+        <h2>Welcome {{username}}</h2>
+        <div class="balance">
+            <div class="amount" id="inr">
+                <img src="../../assets/india.png" alt="" class="currencyflag">
+                <p class="currencyamount">{{currentINR}} RS</p>
+            </div>
+            <div class="amount" id="usd">
+                <img src="../../assets/usa.png" alt="" class="currencyflag">
+                <p class="currencyamount">{{currentUSD}} USD</p>
+            </div>
+            <div class="amount" id="cny">
+                <img src="../../assets/china.png" alt="" class="currencyflag">
+                <p class="currencyamount">{{currentCNY}} CNY</p>
+            </div>
+            <div class="amount" id="euro">
+                <img src="../../assets/euro.png" alt="" class="currencyflag">
+                <p class="currencyamount">{{currentEURO}} EURO</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="conversionsection">
+        <h1>CONVERSIONS</h1>
+
+        <div class="conversionlist">
+            <div class="conversion" *ngFor="let conversion of conversions">
+                <p class="conversionid">{{conversion.conversionId}}</p>
+                <p class="dateoftransfer">{{conversion.dateOfTransfer}}</p>
+                <p class="dateoftransfer">{{conversion.time}}</p>
+                <p class="amountconverted">{{conversion.amountConverted}}</p>
+                <p class="basecurrency">{{conversion.baseCurrency}}</p>
+                <p class="newamount">{{conversion.newAmount}}</p>
+                <p class="newcurrency">{{conversion.newCurrency}}</p>
+            </div>
+            <!-- <div class="conversion" >
+                <p class="conversionid">123456</p>
+                <p class="dateoftransfer">22-22-22:23-32-32</p>
+                <p class="amountconverted">100</p>
+                <p class="basecurrency">inr</p>
+                <p class="newamount">100</p>
+                <p class="newcurrency">usd</p>
+            </div> -->
+        </div>
+    </div>
+</div>

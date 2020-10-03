@@ -1,0 +1,58 @@
+header {
+    height: 12vh;
+    width: 100vw;
+    background-image: linear-gradient(to right, rgb(25, 53, 105) , rgb(22, 121, 179));
+    /* background-image: linear-gradient(to right, rgb(16, 88, 6), rgb(117, 224, 18)); */
+    /* background : linear-gradient(270deg, #FFBB94 0%, #FF889D 100%); */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header .logo {
+    font-weight: 900;
+    color: white;
+    font-size: 2.5em;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    width: 40vw;
+    list-style: none;
+}
+
+ul li a{
+    list-style: none;
+    color: white;
+    font-weight: 600;
+    font-size: 2.5em;
+}
+
+/* li {
+    list-style: none;
+    color: white;
+    font-weight: 600;
+    font-size: 2.5em;
+} */
+
+ul li a:hover {
+    color: rgb(141, 240, 253);
+    cursor: pointer;
+}
+
+/* media queries for phone  */
+@media (max-width: 426px) {
+    header {
+        height: 350px;
+        flex-direction: column;
+    } 
+
+    ul {
+        width: 100vw;
+        height: 30vh;
+        flex-direction: column;
+        /* align-items: center; */
+        padding-left: 215px;
+    }
+}

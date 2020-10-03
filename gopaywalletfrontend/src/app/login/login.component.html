@@ -1,0 +1,31 @@
+<div class="login">
+    <div class="logincard">
+        <h1>LOGIN</h1>
+        <form #userLoginForm="ngForm" (ngSubmit)="onSubmit(uusername, upassword)" method="get">
+            <input type="text" placeholder="USERNAME" class="inputfields" #uusername>
+            <input type="password" name="password" id="userpassword" placeholder="PASSWORD" class="inputfields" #upassword>
+            <input type="submit" value="submit" class="submit">
+        </form>
+    </div>
+</div>
+        <!-- <form #loginForm='ngForm' (ngSubmit)='login(loginForm.value)'>
+    <div class="login-area">
+        <mat-form-field>
+            <mat-label>Username</mat-label>
+            <input matInput #username='ngModel' ngModel type="text" required name="username" maxlength="30"
+                minlength="3">
+            <small class='error-message' [class.error-hide]='username.untouched || username.valid'>Cannot be
+                empty</small>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput #password='ngModel' type="password" required ngModel name="password">
+            <div *ngIf='password.errors && password.touched'>
+                <small class='error-message' *ngIf='password.errors.required'>Cannot be empty</small>
+            </div>
+        </mat-form-field>
+
+        <input class='button' [disabled]='loginForm.form.invalid' type="submit" value="Login">
+    </div>
+</form> -->

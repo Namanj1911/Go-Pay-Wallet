@@ -1,0 +1,14 @@
+<header>
+    <div class="logo">
+        <p>GoPAY</p>
+        <p>WALLET</p>
+    </div>
+
+    <ul>
+        <li><a [routerLink]="['/maindashboard']" routerLinkActive="router-link-active" style="text-decoration: none;">HOME</a></li>
+        <li *ngIf="!this.authService.isUserAuthenticated()"><a [routerLink]="['/login']" routerLinkActive="router-link-active" style="text-decoration: none;">Login</a></li>
+        <li *ngIf="this.authService.isUserAuthenticated()" (click)="logout()"><a [routerLink]="['/login']" routerLinkActive="router-link-active" style="text-decoration: none;" >Logout</a></li>
+        <li *ngIf="!this.authService.isUserAuthenticated()"><a [routerLink]="['/register']" routerLinkActive="router-link-active" style="text-decoration: none;">Register</a></li>
+        <li *ngIf="this.authService.isUserAuthenticated()"><a [routerLink]="['/userdashboard']" routerLinkActive="router-link-active" style="text-decoration: none;">Dashboard</a></li>
+    </ul>
+</header>
